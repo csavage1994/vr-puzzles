@@ -4,6 +4,7 @@
 });*/
 $(document).ready(function(){
   testOne = [0, 0, 0];
+  var testOneComplete = false;
 
   var createEntity = function(pos, id, geometry, material){
     return '<a-entity position="' + pos[0] + ' ' + pos[1] + ' ' + pos[2] + '"id="' + id + '" geometry ="primitive: ' + geometry + '" material="color: ' + ' ' + material +'"></a-entity>';
@@ -11,6 +12,7 @@ $(document).ready(function(){
 
   var increaseScore = function(){
     var score = parseInt($('#int').text());
+    testOneComplete = true;
     score += 1000;
     $('#int').text(score);
     alert('You completed this puzzle!');
@@ -23,7 +25,7 @@ $(document).ready(function(){
   $('#puz1Cube1').on('click', function(){
     this.setAttribute('material', 'color', '#00ff00');
     testOne[0] = 1;
-    if(testOne.indexOf(0) === -1){
+    if(testOne.indexOf(0) === -1 && !testOneComplete){
       console.log('complete');
       increaseScore();
     }
@@ -32,7 +34,7 @@ $(document).ready(function(){
   $('#puz1Cube2').on('click', function(){
     this.setAttribute('material', 'color', '#00ff00');
     testOne[1] = 1;
-    if(testOne.indexOf(0) === -1){
+    if(testOne.indexOf(0) === -1 && !testOneComplete){
       console.log('complete');
       increaseScore();
     }
@@ -41,7 +43,7 @@ $(document).ready(function(){
   $('#puz1Cube3').on('click', function(){
     this.setAttribute('material', 'color', '#00ff00');
     testOne[2] = 1;
-    if(testOne.indexOf(0) === -1){
+    if(testOne.indexOf(0) === -1 && !testOneComplete){
       console.log('complete');
       increaseScore();
     }
