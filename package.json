@@ -1,0 +1,30 @@
+{
+  "name": "MVP",
+  "version": "0.0.1",
+  "description": "shortly using express",
+  "main": "index.js",
+  "repository": "",
+  "license": "Proprietary",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "1.0.8",
+    "bookshelf": "~0.6.4",
+    "bson": "^0.4.21",
+    "ejs": "~0.8.5",
+    "express": "~3.4.8",
+    "express-partials": "~0.2.0",
+    "forever": "^0.10.11",
+    "request": "^2.34.0",
+    "sqlite3": "~3.0.5"
+  },
+  "devDependencies": {
+    "supertest": "^0.10.0"
+  },
+  "engines": {
+    "node": "0.12.7"
+  }
+}
