@@ -5,32 +5,13 @@
   </head>
   <body>
     <div class='score'>
-      Score: 0
+      Score: <h4 id='int'>0</h4>
     </div>
     <div>
       <a-scene id="scene">
         <a-camera id ="camera" position="0 1.8 4" cursor-visible="true" cursor-scale="5" cursor-color="teal" cursor-offset="2" cursor-maxdistance="100" cursor-opacity="0.9"></a-camera>
 
-        <a-entity 
-          position="3 0 0"
-          id="cube1" 
-          geometry="primitive: box" 
-          material="color: green">
-        </a-entity>
 
-        <a-entity 
-          position="0 0 0"
-          id="cube2" 
-          geometry="primitive: box" 
-          material="color: blue">
-        </a-entity>
-
-        <a-entity 
-          position="-3 0 0"
-          id="cube3" 
-          geometry="primitive: box" 
-          material="color: cyan">
-        </a-entity>
 
       </a-scene>
     </div>
