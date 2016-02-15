@@ -13,6 +13,7 @@ $(document).ready(function(){
     var score = parseInt($('#int').text());
     score += 1000;
     $('#int').text(score);
+    alert('You completed this puzzle!');
   }
   var puz1cube1 = createEntity([3,0,0], 'puz1Cube1', 'box', 'blue');
   var puz1cube2 = createEntity([0,0,0], 'puz1Cube2', 'box', 'green');
