@@ -1,4 +1,7 @@
 exports.renderIndex = function(req, res){
-  console.log('here');
   res.render('index');
-}
+};
+
+exports.sendApp = function(req, res){
+  res.send(app.js)
+;};

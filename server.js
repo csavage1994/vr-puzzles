@@ -15,6 +15,7 @@ app.configure(function() {
     app.use(express.session());
 });
 app.get('/', handler.renderIndex);
+//app.get('/app.js', handler.sendApp);
 /*app.get('/', util.checkUser, handler.renderIndex);
 app.get('/create', util.checkUser, handler.renderIndex);
 
