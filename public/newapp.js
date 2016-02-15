@@ -19,7 +19,6 @@ $(document).ready(function(){
 
   var increaseScore = function(){
     var score = parseInt($('#int').text());
-    testOneComplete = true; 
     score += 1000;
     $('#int').text(score);
     alert('You completed this puzzle!');
@@ -45,6 +44,7 @@ $(document).ready(function(){
     testOne[0] = 1;
     if(testOne.indexOf(0) === -1 && !testOneComplete){
       console.log('complete');
+      testOneComplete = true;
       increaseScore();
     }
   });
@@ -54,6 +54,7 @@ $(document).ready(function(){
     testOne[1] = 1;
     if(testOne.indexOf(0) === -1 && !testOneComplete){
       console.log('complete');
+      testOneComplete = true;
       increaseScore();
     }
   });
@@ -63,9 +64,43 @@ $(document).ready(function(){
     testOne[2] = 1;
     if(testOne.indexOf(0) === -1 && !testOneComplete){
       console.log('complete');
+      testOneComplete = true;
       increaseScore();
     }
   });
   //end event handling for first puzzle
   //start event handling for second puzzle
+  $('#puz2Cube1').on('click', function(){
+    if(testTwo[1] === 1){
+      testTwo[2] = 1;
+      this.setAttribute('material', 'color', '#00ff00');
+    }
+  });
+
+  $('#puz2Cube2').on('click', function(){
+    if(testTwo[0] === 1){
+      testTwo[1] = 1;
+      this.setAttribute('material', 'color', '#00ff00');
+    }
+  });
+
+  $('#puz2Cube3').on('click', function(){
+    if(testTwo[0] === 0){
+      testTwo[0] = 1;
+      this.setAttribute('material', 'color', '#00ff00');
+    }
+  });
+
+  $('#puz2Cube4').on('click', function(){
+    if(testTwo[2] === 1){
+      testTwo[3] = 1;
+      this.setAttribute('material', 'color', '#00ff00');
+    }
+    if(testTwo.indexOf(0) === -1 && !testTwoComplete){
+      console.log('complete');
+      testTwoComplete = true;
+      increaseScore();
+    }
+  });
+
 });
