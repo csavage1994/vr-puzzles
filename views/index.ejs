@@ -1,6 +1,7 @@
   <script src="/lib/jquery.js"></script>
   <head>
-    <title>My first VR site</title>
+    <title>Puzzles</title>
+    <script src="http://popmotion.io/assets/js/aframe-role.global.min.js"></script>
     <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
   </head>
   <body>
@@ -11,8 +12,10 @@
       <a-scene id="scene">
         <a-camera id ="camera" position="0 1.8 4" cursor-visible="true" cursor-scale="5" cursor-color="teal" cursor-offset="2" cursor-maxdistance="100" cursor-opacity="0.9"></a-camera>
 
-
-
+        <a-sphere id="target" color="#404040" radius="0.5">
+          <a-animation id="sphere" attribute="position" from="12 0 0" to="8 0 0" dur="1500" repeat="indefinite" 
+          fill="forwards" direction="alternate"></a-animation>
+        </a-sphere>
       </a-scene>
     </div>
   </body>
