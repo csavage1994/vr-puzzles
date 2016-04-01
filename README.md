@@ -6,9 +6,9 @@ in a small amount of time
 
 ###The repository consist of
 
-Basic html layout
-Express server files
-jQuery app to manage A-frame
++ Basic html layout
++ Express server files
++ jQuery app to manage A-frame
 
 
 Install:
