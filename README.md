@@ -19,7 +19,7 @@ The project relies on npm for managing external libraries and dependencies, so b
 
 to run it, simply run
 
-`node server.js'
+`node server.js`
 
 in the root directory.
 
